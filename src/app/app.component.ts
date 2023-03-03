@@ -18,4 +18,14 @@ export class AppComponent {
     this.data=val;
     console.log(val);
   }
+  togglevar:string='none';
+  togglecontent()
+  {
+    if(this.togglevar==='none')
+    {
+      this.togglevar='block';
+    }else{
+      this.togglevar='none';
+    }
+  }
 }

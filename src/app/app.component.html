@@ -1,27 +1,30 @@
-my title is {{title}}
-<br>
+<button (click)="togglecontent()">Toggle View</button>
+<div #togglediv [style.display]="togglevar">
+    my title is {{title}}
+    <br>
 
-<input type="text" #show (keyup)="getVal(show.value)" />
-{{data}}
+    <input type="text" #show (keyup)="getVal(show.value)" />
+    {{data}}
 
-<app-comp1></app-comp1>
+    <app-comp1></app-comp1>
 
-<br />
+    <br />
 
-<h2>Property Binding VS Interpolation</h2>
+    <h2>Property Binding VS Interpolation</h2>
 
-<input type="text" name="first" value={{name}} disabled={{chkdisable}}>
-<br />
-<small>So Property Binding Works Good While we have to check conditions as true or false.</small>
-<br />
-<input type="text" name="last" [value]=name [disabled]=chkdisable> 
+    <input type="text" name="first" value={{name}} disabled={{chkdisable}}>
+    <br />
+    <small>So Property Binding Works Good While we have to check conditions as true or false.</small>
+    <br />
+    <input type="text" name="last" [value]=name [disabled]=chkdisable>
 
-<app-conditioning></app-conditioning>
+    <app-conditioning></app-conditioning>
 
-<br />
-<br />
+    <br />
+    <br />
 
-<app-forloop></app-forloop>
-<br />
-<br />
-<h1 [style.color]="dynamiccolor">Dynamic Styling</h1>
+    <app-forloop></app-forloop>
+    <br />
+    <br />
+    <h1 [style.color]="dynamiccolor">Dynamic Styling</h1>
+</div>

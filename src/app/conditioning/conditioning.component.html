@@ -1,0 +1,20 @@
+<h2>If Else and ElseIf conditioning</h2>
+<ng-template *ngIf="show; then ifblock_id else elseblock_id"></ng-template>
+<ng-template #ifblock_id>if block content</ng-template>
+<ng-template #elseblock_id>else block content</ng-template>
+
+<br />
+Elseif:
+<ng-template [ngIf]="isColor==='red'"><p style="color:red;">Red Color</p></ng-template>
+<ng-template [ngIf]="isColor==='blue'"><p style="color:blue;">blue Color</p></ng-template>
+<ng-template [ngIf]="isColor==='green'"><p style="color:green;">green Color</p></ng-template>
+
+<br />
+<br />
+<h2>Switch Conditions</h2>
+<div [ngSwitch]="isColor">
+    <p *ngSwitchCase="'red'">Switch red case</p>
+    <p *ngSwitchCase="'green'">Switch green case</p>
+    <p *ngSwitchCase="'blue'">Switch blue case</p>
+    <p *ngSwitchDefault>Hello I am the Default case</p>
+</div>

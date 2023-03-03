@@ -1,1 +1,12 @@
-<p>simpleform works!</p>
+<h1>Simple Form</h1>
+<form style="width: 80%;margin: auto;" #BasicForm="ngForm" (ngSubmit)="getForm(BasicForm.value)">
+    Name: <input ngModel type="text" name="name" />
+    <br />
+    Email: <input ngModel type="text" name="email" />
+    <br />
+    Phone: <input ngModel type="text" name="phone" maxlength="10" />
+    <br /><br />
+    <button type="submit">Submit</button>
+</form>
+
+{{displayData.name}}
